@@ -11,7 +11,6 @@ using namespace std;
 
 int main()
 {
-
     // pointeurs sur l'unique instance de la classe UniqueObject
     Board *fenetre;
     // initialisation des pointeurs
@@ -19,16 +18,19 @@ int main()
     char Key = getch();
     Point p(10,4);
     p.drawPoint();
-    p.erasePoint();
+    p.erasePoint();//efface le dernier point
     p.moveUp();
     p.drawPoint();
+    p.debug();
     p.moveLeft();
     p.drawPoint();
+    p.debug();
     p.moveDown();
     p.drawPoint();
+    p.debug();
     p.moveRight();
     p.drawPoint();
-
+	p.debug();
     //Point p2(10,5);
     //p2.drawPoint();
     /*do

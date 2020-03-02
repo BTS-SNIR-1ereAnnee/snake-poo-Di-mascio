@@ -35,6 +35,12 @@ int main()
     	p.moveDown();
     	p.drawPoint();
     }
+    if(Key == 'q')
+    {
+    	p.erasePoint();
+    	p.moveLeft();
+    	p.drawPoint();
+    }
     getch();
     fenetre->kill();
     return 0;

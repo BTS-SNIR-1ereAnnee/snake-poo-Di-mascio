@@ -19,10 +19,12 @@ int main()
 
     Point p(10,4);
     p.drawPoint();
-    Point p2(10,5);
-    p2.drawPoint();
+    //Point p2(10,5);
+    //p2.drawPoint();
     //cout << "press any key to quit" << endl;
-    getchar();
+    //char Key = getch();
+    //if 
+    getch();
     fenetre->kill();
     return 0;
 }

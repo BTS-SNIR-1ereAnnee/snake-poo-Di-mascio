@@ -30,8 +30,8 @@ Board *Board::getInstance ()
 
 Board::Board()
 {
-    initscr();
-    clear();
+    initscr(); //initialisation de l'ecran
+    clear(); //clear l'ecran
 
     this->dessinerPlateau();
 }

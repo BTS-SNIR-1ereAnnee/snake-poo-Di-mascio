@@ -5,7 +5,7 @@
 #include <iostream>
 #include "Point.h"
 #include "Board.h"
-
+#include <boost/thread/thread.hpp>
 
 using namespace std;
 
@@ -15,22 +15,18 @@ int main()
     Board *fenetre;
     // initialisation des pointeurs
     fenetre = Board::getInstance ();
-    char Key = getch();
-    Point p(10,4);
+    char Key;
+    Point p(10,10);
     p.drawPoint();
-    p.erasePoint();//efface le dernier point
-    p.moveUp();
-    p.drawPoint();
-    p.debug();
-    p.moveLeft();
-    p.drawPoint();
-    p.debug();
-    p.moveDown();
-    p.drawPoint();
-    p.debug();
-    p.moveRight();
-    p.drawPoint();
-	p.debug();
+    do 
+    {
+    	p.erasePoint();
+    	p.moveUp();
+    	p.drawPoint();
+    	sleep(1);
+    	if(p.getY() == 1)
+    			 p.setY(19);
+    }while(Key != 'o');
     //Point p2(10,5);
     //p2.drawPoint();
     /*do

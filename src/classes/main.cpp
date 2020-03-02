@@ -29,6 +29,12 @@ int main()
     	p.moveUp();
     	p.drawPoint();
     }
+    if(Key == 's')
+    {
+    	p.erasePoint();
+    	p.moveDown();
+    	p.drawPoint();
+    }
     getch();
     fenetre->kill();
     return 0;

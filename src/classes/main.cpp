@@ -19,10 +19,19 @@ int main()
     char Key = getch();
     Point p(10,4);
     p.drawPoint();
+    p.erasePoint();
+    p.moveUp();
+    p.drawPoint();
+    p.moveLeft();
+    p.drawPoint();
+    p.moveDown();
+    p.drawPoint();
+    p.moveRight();
+    p.drawPoint();
+
     //Point p2(10,5);
     //p2.drawPoint();
-    //cout << "press any key to quit" << endl;
-    do
+    /*do
     {
     	Key = getch();
 	    p.erasePoint();
@@ -43,7 +52,8 @@ int main()
 
     	}
     	p.drawPoint();
-    }while(Key != 'p');
+    }while(Key != 'p');*/
+    getch();
     fenetre->kill();
     return 0;
 }

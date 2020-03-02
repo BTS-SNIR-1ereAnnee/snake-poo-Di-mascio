@@ -22,8 +22,13 @@ int main()
     //Point p2(10,5);
     //p2.drawPoint();
     //cout << "press any key to quit" << endl;
-    //char Key = getch();
-    //if 
+    int Key = getch();
+    if(Key == 'z')
+    {
+    	p.erasePoint();
+    	p.moveUp();
+    	p.drawPoint();
+    }
     getch();
     fenetre->kill();
     return 0;

@@ -16,32 +16,34 @@ int main()
     Board *fenetre;
     // initialisation des pointeurs
     fenetre = Board::getInstance ();
-
+    char Key = getch();
     Point p(10,4);
     p.drawPoint();
     //Point p2(10,5);
     //p2.drawPoint();
     //cout << "press any key to quit" << endl;
-    int Key = getch();
-    p.erasePoint();
-    switch(Key)
+    do
     {
-    	case 'z':
-    		p.moveUp();
-    		break;
-    	case 'q':
-    		p.moveLeft();
-    		break;
-    	case 's':
-    		p.moveDown();
-    		break;
-    	case 'd':
-    		p.moveRight();
-    		break;
+    	Key = getch();
+	    p.erasePoint();
+    	switch(Key)
+    	{
+	    	case 'z':
+	    		p.moveUp();
+	    		break;
+    		case 'q':
+    			p.moveLeft();
+    			break;
+	    	case 's':
+    			p.moveDown();
+    			break;
+    		case 'd':
+    			p.moveRight();
+    			break;
 
-    }
-    p.drawPoint();
-    getch();
+    	}
+    	p.drawPoint();
+    }while(Key != 'p');
     fenetre->kill();
     return 0;
 }

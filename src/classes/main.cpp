@@ -23,30 +23,24 @@ int main()
     //p2.drawPoint();
     //cout << "press any key to quit" << endl;
     int Key = getch();
-    if(Key == 'z')
+    p.erasePoint();
+    switch(Key)
     {
-    	p.erasePoint();
-    	p.moveUp();
-    	p.drawPoint();
+    	case 'z':
+    		p.moveUp();
+    		break;
+    	case 'q':
+    		p.moveLeft();
+    		break;
+    	case 's':
+    		p.moveDown();
+    		break;
+    	case 'd':
+    		p.moveRight();
+    		break;
+
     }
-    if(Key == 's')
-    {
-    	p.erasePoint();
-    	p.moveDown();
-    	p.drawPoint();
-    }
-    if(Key == 'q')
-    {
-    	p.erasePoint();
-    	p.moveLeft();
-    	p.drawPoint();
-    }
-    if(Key == 'd')
-    {
-    	p.erasePoint();
-    	p.moveRight();
-    	p.drawPoint();
-    }
+    p.drawPoint();
     getch();
     fenetre->kill();
     return 0;

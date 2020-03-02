@@ -41,6 +41,12 @@ int main()
     	p.moveLeft();
     	p.drawPoint();
     }
+    if(Key == 'd')
+    {
+    	p.erasePoint();
+    	p.moveRight();
+    	p.drawPoint();
+    }
     getch();
     fenetre->kill();
     return 0;

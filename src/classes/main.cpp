@@ -18,8 +18,12 @@ int main()
     fenetre = Board::getInstance ();
     char Key;
     Point p(10,10);
+    Point p2(11,10);
+    Point p3(12,10);
     Snake s1;
     s1.ajouterPoint(p);
+    s1.ajouterPoint(p2);
+    s1.ajouterPoint(p3);
     s1.afficher();
     //p.drawPoint();
     /*do 

@@ -20,7 +20,7 @@ int main()
     Point p(10,10);
     Snake s1;
     s1.ajouterPoint(p);
-    //s1.afficher();
+    s1.afficher();
     //p.drawPoint();
     /*do 
     {

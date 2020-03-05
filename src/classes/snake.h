@@ -11,6 +11,8 @@ class Snake
 
 	public:
 
+		Snake();
+
 		void ajouterPoint(Point p);
 		void afficher();
 };

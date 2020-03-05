@@ -5,6 +5,7 @@
 #include <iostream>
 #include "Point.h"
 #include "Board.h"
+#include "snake.h"
 #include <boost/thread/thread.hpp>
 
 using namespace std;
@@ -17,8 +18,11 @@ int main()
     fenetre = Board::getInstance ();
     char Key;
     Point p(10,10);
-    p.drawPoint();
-    do 
+    Snake s1;
+    s1.ajouterPoint(p);
+    //s1.afficher();
+    //p.drawPoint();
+    /*do 
     {
     	p.erasePoint();
     	p.moveUp();
@@ -29,7 +33,7 @@ int main()
     }while(Key != 'o');
     //Point p2(10,5);
     //p2.drawPoint();
-    /*do
+    do
     {
     	Key = getch();
 	    p.erasePoint();

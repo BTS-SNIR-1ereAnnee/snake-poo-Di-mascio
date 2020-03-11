@@ -8,6 +8,7 @@ class Snake
 
 		Point serpent[20];
 		int m_index;
+		char m_direction;
 
 	public:
 
@@ -15,5 +16,8 @@ class Snake
 
 		void ajouterPoint(Point p);
 		void afficher();
-		void deplacerPoint();
+		void up();
+		void down();
+		void right();
+		void left();
 };

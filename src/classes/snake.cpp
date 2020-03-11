@@ -3,6 +3,9 @@
 #include "ncurses.h"
 #include <iostream>
 
+int x;
+int y;
+
 Snake::Snake()
 {
 	this->m_index = 0;
@@ -24,10 +27,53 @@ void Snake::afficher()
 	}
 }
 
-void Snake::deplacerPoint()
+void Snake::left()
 {
-	for (int i = 0; i <= m_index; i++)
+	x = serpent[0].getX();
+	y =	serpent[0].getY();
+	serpent[0].moveLeft();
+	for(int i=1; i < m_index; i++)
 	{
-		serpent[i].moveLeft();
+		serpent[i].setX(x);
+		x++;
+	}
+}
+
+void Snake::up()
+{
+	x = serpent[0].getX();
+	y =	serpent[0].getY();
+	serpent[0].moveUp();
+	for(int i = 1; i < m_index; i++)
+	{
+		serpent[i].setX(x);
+		serpent[i].setY(y);
+		x++;
+	}
+}
+
+void Snake::down()
+{
+	x = serpent[0].getX();
+	y =	serpent[0].getY();
+	serpent[0].moveDown();
+	for(int i = 1; i < m_index; i++)
+	{
+		serpent[i].setX(x);
+		serpent[i].setY(y);
+		x--;
+	}
+}
+
+void Snake::right()
+{
+	x = serpent[0].getX();
+	y =	serpent[0].getY();
+	serpent[0].moveRight();
+	for(int i=1; i < m_index; i++)
+	{
+		serpent[i].setX(x);
+		serpent[i].setY(y);
+		x--;
 	}
 }

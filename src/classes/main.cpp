@@ -25,10 +25,48 @@ int main()
     s1.ajouterPoint(p2);
     s1.ajouterPoint(p3);
    	s1.afficher();
-   	s1.deplacerPoint();
    	usleep(500000);
+   	s1.left();
    	s1.afficher();
-    
+   	usleep(500000);
+   	s1.up();
+   	s1.afficher();
+   	usleep(500000);
+   	s1.up();
+   	s1.afficher();
+   	usleep(500000);
+   	s1.up();
+   	s1.afficher();
+   	usleep(500000);
+   	s1.right();
+   	s1.afficher();
+   	usleep(500000);
+   	s1.right();
+   	s1.afficher();
+   	usleep(500000);
+   	s1.right();
+   	s1.afficher();
+   	usleep(500000);
+   	s1.right();
+   	s1.afficher();
+   	usleep(500000);
+   	s1.right();
+   	s1.afficher();
+   	usleep(500000);
+   	s1.down();
+   	s1.afficher();
+   	usleep(500000);
+   	s1.down();
+   	s1.afficher();
+   	usleep(500000);
+   	s1.down();
+   	s1.afficher();
+   	usleep(500000);
+   	s1.down();
+   	s1.afficher();
+   	usleep(500000);
+
+   	    
     //p.drawPoint();
     /*do 
     {

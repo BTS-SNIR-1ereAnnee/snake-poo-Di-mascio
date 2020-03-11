@@ -17,17 +17,17 @@ void Snake::ajouterPoint(Point p)
 
 void Snake::afficher()
 {
-	for (int i = 0; i < m_index; ++i)
+	for (int i = 0; i <= m_index; i++)
 	{
-		
+		serpent[m_index-1].erasePoint();
 		serpent[i].drawPoint();
 	}
 }
 
 void Snake::deplacerPoint()
 {
-	for (int i = 0; i < m_index; ++i)
+	for (int i = 0; i <= m_index; i++)
 	{
-		serpent[i].moveUp();
+		serpent[i].moveLeft();
 	}
 }

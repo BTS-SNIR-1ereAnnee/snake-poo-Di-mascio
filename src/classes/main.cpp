@@ -24,14 +24,10 @@ int main()
     s1.ajouterPoint(p);
     s1.ajouterPoint(p2);
     s1.ajouterPoint(p3);
-    s1.afficher();
-    for (int i = 0; i < 5; ++i)
-    {
-    	usleep(500000);
-    	s1.deplacerPoint();
-    	s1.afficher();
-    }
-    
+   	s1.afficher();
+   	s1.deplacerPoint();
+   	usleep(500000);
+   	s1.afficher();
     
     //p.drawPoint();
     /*do 

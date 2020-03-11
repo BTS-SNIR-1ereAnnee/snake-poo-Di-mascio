@@ -6,7 +6,7 @@
 #include "Point.h"
 #include "Board.h"
 #include "snake.h"
-#include <boost/thread/thread.hpp>
+#include <unistd.h>
 
 using namespace std;
 
@@ -25,6 +25,14 @@ int main()
     s1.ajouterPoint(p2);
     s1.ajouterPoint(p3);
     s1.afficher();
+    for (int i = 0; i < 5; ++i)
+    {
+    	usleep(500000);
+    	s1.deplacerPoint();
+    	s1.afficher();
+    }
+    
+    
     //p.drawPoint();
     /*do 
     {

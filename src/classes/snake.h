@@ -15,4 +15,5 @@ class Snake
 
 		void ajouterPoint(Point p);
 		void afficher();
+		void deplacerPoint();
 };

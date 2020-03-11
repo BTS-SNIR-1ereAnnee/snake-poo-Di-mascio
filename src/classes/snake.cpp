@@ -19,6 +19,7 @@ void Snake::afficher()
 {
 	for (int i = 0; i < m_index; ++i)
 	{
+		
 		serpent[i].drawPoint();
 	}
 }
@@ -29,10 +30,4 @@ void Snake::deplacerPoint()
 	{
 		serpent[i].moveUp();
 	}
-
-for (int i = 0; i < m_index; ++i)
-	{
-		serpent[i].moveDown();
-	}
-
 }

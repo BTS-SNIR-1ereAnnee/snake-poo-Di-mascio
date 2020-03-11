@@ -6,28 +6,28 @@
 int x;
 int y;
 
-Snake::Snake()
+Snake::Snake() //Constructeur par default
 {
-	this->m_index = 0;
+	this->m_index = 0; //initialisation de m_index à 0 
 }
 
-void Snake::ajouterPoint(Point p)
+void Snake::ajouterPoint(Point p) //insert un point dans le tableau snake
 {
-	this->serpent[m_index] = p;
+	this->serpent[m_index] = p; //insertion du point dans le tableau snake
 	if(m_index <= 19)
 		m_index++;
 }	
 
-void Snake::afficher()
+void Snake::afficher() //affichage du serpent
 {
-	for (int i = 0; i <= m_index; i++)
+	for (int i = 0; i <= m_index; i++) //Boucle permettant d'afficher tout le serpent
 	{
 		serpent[m_index-1].erasePoint();
 		serpent[i].drawPoint();
 	}
 }
 
-void Snake::left()
+void Snake::left() //Fait tourner le serpent vers la gauche
 {
 	x = serpent[0].getX();
 	y =	serpent[0].getY();
@@ -39,7 +39,7 @@ void Snake::left()
 	}
 }
 
-void Snake::up()
+void Snake::up() //Fait tourner le serpent vers le haut
 {
 	x = serpent[0].getX();
 	y =	serpent[0].getY();
@@ -52,7 +52,7 @@ void Snake::up()
 	}
 }
 
-void Snake::down()
+void Snake::down() //Fait tourner le serpent vers le bas
 {
 	x = serpent[0].getX();
 	y =	serpent[0].getY();
@@ -65,7 +65,7 @@ void Snake::down()
 	}
 }
 
-void Snake::right()
+void Snake::right() //Fait tourner le serpent vers la droite
 {
 	x = serpent[0].getX();
 	y =	serpent[0].getY();

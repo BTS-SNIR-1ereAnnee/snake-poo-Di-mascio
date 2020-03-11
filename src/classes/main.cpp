@@ -12,19 +12,22 @@ using namespace std;
 
 int main()
 {
+
     // pointeurs sur l'unique instance de la classe UniqueObject
     Board *fenetre;
     // initialisation des pointeurs
     fenetre = Board::getInstance ();
     char Key;
-    Point p(10,10);
+    Point p(10,10); //Creation de point
     Point p2(11,10);
     Point p3(12,10);
-    Snake s1;
-    s1.ajouterPoint(p);
-    s1.ajouterPoint(p2);
-    s1.ajouterPoint(p3);
-   	s1.afficher();
+    Snake s1; //Creation du serpent
+    s1.ajouterPoint(p); //ajout de point
+    s1.ajouterPoint(p2);//ajout de point
+    s1.ajouterPoint(p3);//ajout de point
+    
+    
+   	s1.afficher();    //Suite d'instruction pour faire bouger le snake 
    	usleep(500000);
    	s1.left();
    	s1.afficher();
